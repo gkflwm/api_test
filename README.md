@@ -1,16 +1,22 @@
-# api_test
+Global Prayer Time Finder (API Test)
 
-A new Flutter project.
+This Flutter test app experiments with API fetching by combining two public APIs which are IslamicAPI
+ and OpenCage Geocoding API
+.
+It allows users to type any city or country name and view the local prayer times for that location.
 
-## Getting Started
+ How It Works
 
-This project is a starting point for a Flutter application.
+- The user enters a city or country name in the search bar.
 
-A few resources to get you started if this is your first Flutter project:
+- The app sends the name to OpenCage, which returns the latitude and longitude for that place.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- These coordinates are then used to call IslamicAPI, which provides the daily prayer times.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- The results are displayed in a simple, clean interface.
+
+ APIs Used
+
+- OpenCage Geocoding API : converts city or country names into latitude/longitude.
+
+- IslamicAPI : provides prayer times based on coordinates.
